@@ -18,50 +18,50 @@ hbs.registerPartials(partialsPath)
 app.use(express.static(publicDirectoryPath))
 
 app.get('', (req, res) => {
-    res.render('index', {
-        title: 'Weather',
-        name: 'Andrew Mead'
-    })
+	res.render('index', {
+		title: 'Weather',
+		name: 'Aryan Agarwal'
+	})
 })
 
 app.get('/about', (req, res) => {
-    res.render('about', {
-        title: 'About Me',
-        name: 'Andrew Mead'
-    })
+	res.render('about', {
+		title: 'About Me',
+		name: 'Aryan Agarwal'
+	})
 })
 
 app.get('/help', (req, res) => {
-    res.render('help', {
-        helpText: 'This is some helpful text.',
-        title: 'Help',
-        name: 'Andrew Mead'
-    })
+	res.render('help', {
+		helpText: 'This is some helpful text.',
+		title: 'Help',
+		name: 'Aryan Agarwal'
+	})
 })
 
 app.get('/weather', (req, res) => {
-    res.send({
-        forecast: 'It is snowing',
-        location: 'Philadelphia'
-    })
+	res.send({
+		forecast: 'It is very cold',
+		location: 'Saharanpur'
+	})
 })
 
 app.get('/help/*', (req, res) => {
-    res.render('404', {
-        title: '404',
-        name: 'Andrew Mead',
-        errorMessage: 'Help article not found.'
-    })
+	res.render('404', {
+		title: '404',
+		name: 'Aryan Agarwal',
+		errorMessage: 'Help article not found.'
+	})
 })
 
 app.get('*', (req, res) => {
-    res.render('404', {
-        title: '404',
-        name: 'Andrew Mead',
-        errorMessage: 'Page not found.'
-    })
+	res.render('404', {
+		title: '404',
+		name: 'Aryan Agarwal',
+		errorMessage: 'Page not found.'
+	})
 })
 
 app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+	console.log('Server is up on port 3000.')
 })
